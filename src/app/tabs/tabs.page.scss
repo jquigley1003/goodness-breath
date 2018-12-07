@@ -1,1 +1,8 @@
-
+:host {
+  ion-tab-bar {
+    --ion-tab-bar-background: transparent;
+    --background: transparent;
+    --background-color: transparent;
+    --ion-color-base: transparent !important;
+  }
+}

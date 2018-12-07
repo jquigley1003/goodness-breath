@@ -1,0 +1,231 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tools</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen (ionScroll)="vanishOnScroll($event)" [scrollEvents]="true">
+  <img [class.vanish]="showImage" src="/assets/imgs/GBP.jpg">
+  <ion-grid no-padding>
+    <ion-row class="tools-background">
+      <ion-col size="12" padding-top text-center>
+        <h1>Tools for Transforming Negativity:</h1>
+        <ion-segment (ionChange)="segmentChanged($event)" value="useOfImagery">
+          <ion-segment-button href="#useOfImagery" value="useOfImagery">
+            Use of Imagery
+          </ion-segment-button>
+          <ion-segment-button href="#useOfBreath" value="useOfBreath">
+            Use of Breath
+          </ion-segment-button>
+          <ion-segment-button href="#useOfMovement" value="useOfMovement">
+            Use of Movement
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+      <ion-col  size="12" padding>
+        <ion-slides *ngIf="showUseOfImagery" pager="true" [options]="slideOpts">
+          <ion-slide>
+            <h1>Slide 1</h1>
+            <p>
+              Imagine a composting bin in the center of your belly. The negativity goes into the
+              deep dark earth and gets turned and turned and transformed into fertile rich soil
+              that allows for growth. This composting bin can always be available to you so that
+              you can compost any fears, doubts and anger that arise as you focus on goodness. In
+              this way, the negativity never gets in the way but adds to the fertile ground.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h1>Slide 2</h1>
+            <p>
+              Imagine a fire in your gut burning up the negativity that arises, crackling and
+              transforming all that you don’t need, giving you heat and power for your breath of
+              goodness.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h1>Slide 3</h1>
+            <p>
+              See the negativity as a color and allow other hues of color to blend with it,
+              elevating into more and more positive vibrancy.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h1>Slide 4</h1>
+            <p>
+              Visualize being cleansed by a rainstorm that bathes your face and body with
+              raindrops of pure water and negative ions that restore you into the experience of
+              your inherent goodness.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h1>Slide 5</h1>
+            <p>
+              Visualize yourself stepping into a shower of light and the light is powerful enough
+              to reconfigure what is arising within you and restore you.
+            </p>
+          </ion-slide>
+        </ion-slides>
+        <ion-slides *ngIf="showUseOfBreath" pager="true" [options]="slideOpts">
+          <ion-slide>
+            <h1>Slide 1</h1>
+            <p>
+              Emotional Balancing breath: Three short inhale breaths through the nostrils, hold
+              and fill up and full long exhale through the mouth. Continual circular breath,
+              being open to experiencing it cleansing and balancing your emotional body.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h1>Slide 2</h1>
+            <p>
+              Alternate nostril breathing or “nadi shodhana” — Using the right thumb, softly
+              close the right nostril, and inhale as slowly as you can through the left nostril,
+              then close it with your ring finger. Pause. Open and exhale slowly through the
+              right nostril.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h1>Slide 3</h1>
+            <p>
+              Breath of fire — Breath Of Fire is a form of a cleansing <span
+              class="color-it">pranayama</span> (breathing technique) rooted in Kundalini yoga.
+              Breathe in and out through the nose and start to pull your abdomen in during the
+              exhale, and press it out during the inhale. Your belly fills up with air during the
+              inhale and use your abdominal muscles to push the air out during the exhale,
+              imagining your belly button going in to your spine. Start to shorten each breath
+              and pick up the pace. The breathing should be loud and quick. Equalize the inhale
+              and exhale in both strength and length. This breath is for purification and
+              rejuvenation.
+            </p>
+          </ion-slide>
+        </ion-slides>
+        <ion-slides *ngIf="showUseOfMovement" pager="true" [options]="slideOpts">
+          <ion-slide>
+            <h1>Slide 1</h1>
+            <p>
+              Shake — Standing, your feet hip length apart, rooted into the earth, begin to shake
+              off the negativity and make sounds. Just let your whole body hang towards the
+              earth, chin down to chest, arms down, and then start shaking and sounding out.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h1>Slide 2</h1>
+            <p>
+              Cleanse and Lift into Vertical Alignment — Standing, arms over your head, and begin
+              to circle your arms over your head, in big full circles, using breath and sound to
+              clear out your energy space. Then lift your self into Vertical Alignment, with arms
+              directly over head, feeling feet into ground, see yourself receiving light from
+              above, going through and down your whole body, into the earth.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h1>Slide 3</h1>
+            <p>
+              Chop the Karmic Logs — Stand with your feet further apart than hip length, steady
+              into the earth, parallel to one another, toes straight forward. Swing your arms
+              over head, clasp your hands, imagine holding a axe and take a deep inhale. With the
+              exhale, allow your axe to come down between your legs as if you are chopping logs.
+              Allow a sound of HaH to vibrate out from your belly. Do this again and again until
+              you feel cleansed. You can always shake once you finish before you practice the
+              goodness breath.
+            </p>
+          </ion-slide>
+        </ion-slides>
+        <ion-row>
+          <ion-col text-center>
+            <ion-button *ngIf="!hidePrevious" (click)="previous()">Previous</ion-button>
+            <ion-button *ngIf="!hideNext" (click)="next()">Next</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col size="8">
+        <h2>Tidbits to Remember:</h2>
+        <div>
+          <p>
+            * When you practice the goodness breath, you may or may not feel goodness. You can’t
+            expect yourself or contract with yourself to feel a specific feeling. It doesn’t work
+            that way. It is the intention and focus that matters.
+          </p>
+        </div>
+        <div>
+          <p>
+            * You can use your thoughts to direct the practice. With the inhale, your mind can
+            say to yourself —  “My essence is goodness” and then with the pause, “I am this
+            goodness. I savor the goodness” and with the exhale, “I offer this goodness out into
+            the world for healing and awakening.”
+          </p>
+        </div>
+        <div>
+          <p>
+            * You can use your physical body for the practice and create movements to enhance
+            your experience of the goodness breath.
+          </p>
+        </div>
+        <div>
+          <p>
+            * With your exhale, you can first direct the goodness back into yourself, permeating
+            your whole body with goodness, which then exudes out into the world.
+          </p>
+        </div>
+        <div>
+          <p>
+            You are encouraged to share your tools and tidbits that you discover works for you by
+            sharing them on our Facebook page.
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col size="8">
+        <h1>Ideas for the Practice of The Goodness Breath:</h1>
+        <ul>
+          <li>
+            Practice it together in circles and gatherings of people.
+          </li>
+          <li>
+            Practice it as you look in the mirror.
+          </li>
+          <li>
+            Practice it in nature and breathe in the goodness of the trees and breathe out the
+            goodness into all of nature.
+          </li>
+          <li>
+            Visualize the Grid of the Earth being lit up everywhere by humans steadfast in
+            knowing goodness.
+          </li>
+          <li>
+            Practice it in dyads with people — Breathing in the other person’s goodness and
+            breathing out your goodness to him or her. Breathing in your goodness and exhaling
+            your goodness to this person before you.
+          </li>
+          <li>
+            Advance practice — Practice it as you listen to the news. This is a very powerful
+            thing to do when you practice this with a group of people.
+          </li>
+        </ul>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col size="8">
+        <h1>Practicing the Goodness Breath:</h1>
+        <ul>
+          <li>
+            Practice it all day, every day, as much as you can remember.
+          </li>
+          <li>
+            Share it with others and practice it in the presence of others.
+          </li>
+          <li>
+            See yourself as a powerful warrior with the goodness breath — there is something you
+            can do, every day. Fiercely practice goodness.
+          </li>
+          <li>
+            Write about it. Talk about it. Practice it with others. Make it yours — and everyone’s!
+          </li>
+        </ul>
+        <blockquote text-end><i>Breathe in goodness.  Savor.  Breathe out goodness.</i>
+        </blockquote>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,17 +1,9 @@
-:host {
-
-}
-
 ion-header {
-  --border-width: 0;
-  --background: transparent;
-  --ion-color-base: transparent !important;
+  --background: var(--ion-color-light);
 }
 
 ion-toolbar {
-  --border-width: 0;
   --background: transparent;
-  --ion-color-base: transparent !important;
 }
 
 ion-segment-button {
@@ -31,19 +23,16 @@ img {
   opacity: 1;
   transition: opacity 0.5s linear;
 }
-
-
-.font-background {
-  background: rgba(255, 255, 255, .5);
+ul {
+  list-style-image: url('/assets/imgs/asterisk-small.png');
 }
 
 .bold-it {
   font-weight: bold;
 }
 
-.steps-background {
-  background: var(--ion-color-primary);
-  color: var(--ion-color-secondary);
+.color-it {
+  color: #ffffff;
 }
 
 .vanish {
@@ -53,4 +42,9 @@ img {
   transition: opacity 0.5s linear;
   //transform: scaleY(0) scaleX(0);
   //transition: transform 0.5s linear;
+}
+
+.tools-background {
+  background: var(--ion-color-primary);
+  color: var(--ion-color-secondary);
 }

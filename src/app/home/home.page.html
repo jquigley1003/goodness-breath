@@ -1,10 +1,156 @@
-<ion-header>
+<ion-header translucent>
   <ion-toolbar>
     <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+<ion-content fullscreen (ionScroll)="vanishOnScroll($event)" [scrollEvents]="true">
+  <img [class.vanish]="showImage" src="/assets/imgs/GBP.jpg">
+  <ion-grid no-padding>
+    <ion-row justify-content-center>
+      <ion-col size="8">
+        <h1>The Goodness Breath Project</h1>
+        <h3>Light Up the Grid with Goodness</h3>
+        <p>The Goodness Breath came to me as a directive and ongoing spiritual
+          practice for all of us to participate in at this time of upheaval and
+          transformation. It is a way of staying in powerful alignment with who we
+          really are as human beings and what we are made of - <span
+            style="font-style: italic;">goodness</span>.
+        </p>
+        <p>In these challenging times of witnessing our government enact war on our
+          environment (wildlife, air and water, earth, national parks), on immigrants
+          (e.g., separating parents from children), on our human rights and the very
+          values that our democracy was founded on, it is so easy to “go low” — to
+          match the ugliness with our own rage, disgust, fear and hatred.</p>
+        <p>However, in order to turn things around, we are called to do the very
+          opposite.  We need to take the high road, as in Michelle Obama’s
+          declaration, “When they go low, we go high.”  And since virtually every day
+          there is another assault on our democratic values, we must <span
+            style="font-style: italic;">consistently</span> practice going “high.”</p>
+        <p></p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="steps-background">
+      <ion-col size="12">
+        <div text-center padding-top>
+          The formula is simple for The Goodness Breath.<br><br>
+          <span class="bold-it">Here are the steps:</span><br><br>
+        </div>
+        <ion-segment (ionChange)="segmentChanged($event)" value="breatheIn">
+          <ion-segment-button href="#breatheIn" value="breatheIn">
+            1. Breathe In
+          </ion-segment-button>
+          <ion-segment-button href="#takeMoment" value="takeMoment">
+            2. Take a Moment
+          </ion-segment-button>
+          <ion-segment-button href="#breathOut" value="breatheOut">
+            3. Breathe Out
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+      <ion-col *ngIf="showContentBI" size="12">
+        <div text-center padding-top padding-bottom>
+          Breathe in and imagine filling ourselves up by drawing from the well of our
+          own inherent goodness.
+        </div>
+      </ion-col>
+      <ion-col *ngIf="showContentTM" size="12">
+        <div text-center padding-top padding-bottom>
+          Take a moment to consciously experience the beneficent power of this goodness.
+        </div>
+      </ion-col>
+      <ion-col *ngIf="showContentBO" size="12">
+        <div text-center padding-top padding-bottom>
+          Breathe out, intentionally channeling this goodness into our country and our world
+          as a force of light.
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col size="8">
+        <h2>Let's explore the depths of each step:</h2>
+        <p>
+          1. Breathe in and fill up with the goodness that dwells at the core of our being. In
+          order to do this, we must remember that goodness lives within us. A lot of people
+          don’t have faith in their own goodness and often feel “not good enough” or “unworthy”
+          in some way. These negative stories about ourselves must be seen for what they are —
+          conditioning and narratives we have made up to explain negative experiences in our
+          lives, usually in our younger years. The call is to relinquish any doubt about the
+          fact of our own inherent goodness.
+        </p>
+        <p>
+          2. Intentionally drink of this goodness and pause long enough to ideally feel the
+          richness of goodness in your body. But whether we feel it or not, the goodness is
+          there. There are various approaches to being aware of the goodness: Breathe into your
+          heart. Acknowledge your essence. Pause and experience your essence as goodness. Some
+          people describe this process as reaching deep inside of themselves, beyond their
+          stories and personalities, into the spiritual well of our oneness. Others tell me
+          that they intentionally tune into a sense of divinity or light within themselves that
+          they believe is in all of us. Still others focus on the giving and receiving of
+          kindness as a way to viscerally fill themselves up with goodness. Of course, feel
+          free to experiment with various ways of tuning into goodness, and discover whatever
+          works best for you. Bottom line, what is most important is that you find your way to
+          access the goodness within you and you pause long enough to savor, in some manner,
+          this essential goodness. Even one conscious moment can be transformative.
+        </p>
+        <p>
+          3. Intentionally channel this goodness out to others, into our country and our world
+          as a force of light. With your exhalation, you propel this goodness from your heart
+          and center, out into the world. You can use sound and body movement if this feels
+          empowering for you. Or you can just use the power of visualization and intention to
+          propel this Goodness out into the world as a force for global healing.
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col size="8">
+        <h1>Light Up the Grid with Goodness</h1>
+        <p>
+          “I am one person remembering... and now I am two and now ten and now twenty and now
+          the twenty becomes twenty million as we light up our Earth’s grid with goodness as a
+          global prayer-in-action”
+        </p>
+        <p>
+          This is what it is going to take — all over the world. We wake up to the force of our
+          goodness and join together in a global movement.
+        </p>
+        <p>
+          Imagine millions of humans, all across the world, participating in this focused
+          spiritual practice — people of all races and languages, rich and poor, young and old
+          — all breathing in goodness, breathing out goodness as a fierce force for
+          transformation.
+        </p>
+        <p>
+          So, how does one person become millions of people committed to Lighting Up the Grid
+          with Goodness?
+        </p>
+        <p class="bold-it">Let's make it happen.</p>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col size="8">
+        <h1>Make your commitment by placing your name and location on www.goodnessbreath.com</h1>
+        <p>
+          * Make it real by making it a habit to practice the goodness breath constantly throughout
+          the day so that it becomes a part of your daily life focus.
+        </p>
+        <p>
+          * Breathe in Goodness and Breathe out Goodness consciously every day at least for five
+          minutes.
+        </p>
+        <p>
+          * Invite everyone you know to join forces with the Goodness Breath Project. Bring it
+          into your community, your family, your circle of friends, your school, your place of
+          worship. Make it your own to share with as many people as you can and spread the word.
+        </p>
+        <p>
+          * Practice it for yourself, for all of us humans, and for all beings who share Mother
+          Earth as our home.
+        </p>
+        <p>
+          * Add your way of experiencing the goodness breath on Instagram.
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

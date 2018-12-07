@@ -1,10 +1,10 @@
-<ion-header>
+<ion-header [class.vanish]="showImage">
   <ion-toolbar>
     <ion-title>Tools</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content fullscreen (ionScroll)="vanishOnScroll($event)" [scrollEvents]="true">
-  <img [class.vanish]="showImage" src="/assets/imgs/GBP.jpg">
+  <img [class.vanish]="showImage" class="main-image" src="/assets/imgs/breathe.jpg">
   <ion-grid no-padding>
     <ion-row class="tools-background">
       <ion-col size="12" padding-top text-center>
@@ -23,110 +23,154 @@
       </ion-col>
       <ion-col  size="12" padding>
         <ion-slides *ngIf="showUseOfImagery" pager="true" [options]="slideOpts">
-          <ion-slide>
-            <h1>Slide 1</h1>
-            <p>
-              Imagine a composting bin in the center of your belly. The negativity goes into the
-              deep dark earth and gets turned and turned and transformed into fertile rich soil
-              that allows for growth. This composting bin can always be available to you so that
-              you can compost any fears, doubts and anger that arise as you focus on goodness. In
-              this way, the negativity never gets in the way but adds to the fertile ground.
-            </p>
+          <ion-slide text-center>
+            <ion-row>
+              <ion-col>
+                <img src="assets/imgs/fertile-soil.jpg">
+                <p>
+                  Imagine a composting bin in the center of your belly. The negativity goes into the
+                  deep dark earth and gets turned and turned and transformed into fertile rich soil
+                  that allows for growth. This composting bin can always be available to you so that
+                  you can compost any fears, doubts and anger that arise as you focus on goodness. In
+                  this way, the negativity never gets in the way but adds to the fertile ground.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
           <ion-slide>
-            <h1>Slide 2</h1>
-            <p>
-              Imagine a fire in your gut burning up the negativity that arises, crackling and
-              transforming all that you don’t need, giving you heat and power for your breath of
-              goodness.
-            </p>
+            <ion-row>
+              <ion-col>
+                <img src="assets/imgs/fire-belly.jpg">
+                <p>
+                  Imagine a fire in your gut burning up the negativity that arises, crackling and
+                  transforming all that you don’t need, giving you heat and power for your breath of
+                  goodness.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
           <ion-slide>
-            <h1>Slide 3</h1>
-            <p>
-              See the negativity as a color and allow other hues of color to blend with it,
-              elevating into more and more positive vibrancy.
-            </p>
+            <ion-row>
+              <ion-col>
+                <img src="assets/imgs/color-blend.jpg">
+                <p>
+                  See the negativity as a color and allow other hues of color to blend with it,
+                  elevating into more and more positive vibrancy.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
           <ion-slide>
-            <h1>Slide 4</h1>
-            <p>
-              Visualize being cleansed by a rainstorm that bathes your face and body with
-              raindrops of pure water and negative ions that restore you into the experience of
-              your inherent goodness.
-            </p>
+            <ion-row>
+              <ion-col>
+                <img src="assets/imgs/child-rain.jpg">
+                <p>
+                  Visualize being cleansed by a rainstorm that bathes your face and body with
+                  raindrops of pure water and negative ions that restore you into the experience of
+                  your inherent goodness.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
           <ion-slide>
-            <h1>Slide 5</h1>
-            <p>
-              Visualize yourself stepping into a shower of light and the light is powerful enough
-              to reconfigure what is arising within you and restore you.
-            </p>
+            <ion-row>
+              <ion-col>
+                <img src="assets/imgs/light-shower.jpg">
+                <p>
+                  Visualize yourself stepping into a shower of light and the light is powerful enough
+                  to reconfigure what is arising within you and restore you.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
         </ion-slides>
         <ion-slides *ngIf="showUseOfBreath" pager="true" [options]="slideOpts">
           <ion-slide>
-            <h1>Slide 1</h1>
-            <p>
-              Emotional Balancing breath: Three short inhale breaths through the nostrils, hold
-              and fill up and full long exhale through the mouth. Continual circular breath,
-              being open to experiencing it cleansing and balancing your emotional body.
-            </p>
+            <ion-row>
+              <ion-col>
+                <h1>Emotional Balancing Breath</h1>
+                <p>
+                  Three short inhale breaths through the nostrils, hold
+                  and fill up and full long exhale through the mouth. Continual circular breath,
+                  being open to experiencing it cleansing and balancing your emotional body.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
           <ion-slide>
-            <h1>Slide 2</h1>
-            <p>
-              Alternate nostril breathing or “nadi shodhana” — Using the right thumb, softly
-              close the right nostril, and inhale as slowly as you can through the left nostril,
-              then close it with your ring finger. Pause. Open and exhale slowly through the
-              right nostril.
-            </p>
+            <ion-row>
+              <ion-col>
+                <h1>Alternate Nostril Breathing</h1>
+                <p>
+                  Alternate nostril breathing or “nadi shodhana” — Using the right thumb, softly
+                  close the right nostril, and inhale as slowly as you can through the left nostril,
+                  then close it with your ring finger. Pause. Open and exhale slowly through the
+                  right nostril.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
           <ion-slide>
-            <h1>Slide 3</h1>
-            <p>
-              Breath of fire — Breath Of Fire is a form of a cleansing <span
-              class="color-it">pranayama</span> (breathing technique) rooted in Kundalini yoga.
-              Breathe in and out through the nose and start to pull your abdomen in during the
-              exhale, and press it out during the inhale. Your belly fills up with air during the
-              inhale and use your abdominal muscles to push the air out during the exhale,
-              imagining your belly button going in to your spine. Start to shorten each breath
-              and pick up the pace. The breathing should be loud and quick. Equalize the inhale
-              and exhale in both strength and length. This breath is for purification and
-              rejuvenation.
-            </p>
+            <ion-row>
+              <ion-col>
+                <h1>Breath Of Fire</h1>
+                <p>
+                  Breath Of Fire is a form of a cleansing <span
+                        class="color-it">pranayama</span> (breathing technique) rooted in Kundalini yoga.
+                  Breathe in and out through the nose and start to pull your abdomen in during the
+                  exhale, and press it out during the inhale. Your belly fills up with air during the
+                  inhale and use your abdominal muscles to push the air out during the exhale,
+                  imagining your belly button going in to your spine. Start to shorten each breath
+                  and pick up the pace. The breathing should be loud and quick. Equalize the inhale
+                  and exhale in both strength and length. This breath is for purification and
+                  rejuvenation.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
         </ion-slides>
         <ion-slides *ngIf="showUseOfMovement" pager="true" [options]="slideOpts">
           <ion-slide>
-            <h1>Slide 1</h1>
-            <p>
-              Shake — Standing, your feet hip length apart, rooted into the earth, begin to shake
-              off the negativity and make sounds. Just let your whole body hang towards the
-              earth, chin down to chest, arms down, and then start shaking and sounding out.
-            </p>
+            <ion-row>
+              <ion-col>
+                <h1>Shake</h1>
+                <p>
+                  Standing, your feet hip length apart, rooted into the earth, begin to shake
+                  off the negativity and make sounds. Just let your whole body hang towards the
+                  earth, chin down to chest, arms down, and then start shaking and sounding out.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
           <ion-slide>
-            <h1>Slide 2</h1>
-            <p>
-              Cleanse and Lift into Vertical Alignment — Standing, arms over your head, and begin
-              to circle your arms over your head, in big full circles, using breath and sound to
-              clear out your energy space. Then lift your self into Vertical Alignment, with arms
-              directly over head, feeling feet into ground, see yourself receiving light from
-              above, going through and down your whole body, into the earth.
-            </p>
+            <ion-row>
+              <ion-col>
+                <h1>Cleanse and Lift into Vertical Alignment</h1>
+                <p>
+                  Standing, arms over your head, and begin
+                  to circle your arms over your head, in big full circles, using breath and sound to
+                  clear out your energy space. Then lift your self into Vertical Alignment, with arms
+                  directly over head, feeling feet into ground, see yourself receiving light from
+                  above, going through and down your whole body, into the earth.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
           <ion-slide>
-            <h1>Slide 3</h1>
-            <p>
-              Chop the Karmic Logs — Stand with your feet further apart than hip length, steady
-              into the earth, parallel to one another, toes straight forward. Swing your arms
-              over head, clasp your hands, imagine holding a axe and take a deep inhale. With the
-              exhale, allow your axe to come down between your legs as if you are chopping logs.
-              Allow a sound of HaH to vibrate out from your belly. Do this again and again until
-              you feel cleansed. You can always shake once you finish before you practice the
-              goodness breath.
-            </p>
+            <ion-row>
+              <ion-col>
+                <h1>Chop the Karmic Logs</h1>
+                <p>
+                  Stand with your feet further apart than hip length, steady
+                  into the earth, parallel to one another, toes straight forward. Swing your arms
+                  over head, clasp your hands, imagine holding a axe and take a deep inhale. With the
+                  exhale, allow your axe to come down between your legs as if you are chopping logs.
+                  Allow a sound of HaH to vibrate out from your belly. Do this again and again until
+                  you feel cleansed. You can always shake once you finish before you practice the
+                  goodness breath.
+                </p>
+              </ion-col>
+            </ion-row>
           </ion-slide>
         </ion-slides>
         <ion-row>

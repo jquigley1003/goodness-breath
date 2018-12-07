@@ -1,10 +1,10 @@
-<ion-header>
+<ion-header [class.vanish]="showImage">
   <ion-toolbar>
     <ion-title>Mission</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content fullscreen (ionScroll)="vanishOnScroll($event)" [scrollEvents]="true">
-  <img [class.vanish]="showImage" src="/assets/imgs/GBP.jpg">
+  <img [class.vanish]="showImage" class="main-image" src="/assets/imgs/mission.jpg">
   <ion-grid no-padding>
     <ion-row justify-content-center>
       <ion-col size="8">

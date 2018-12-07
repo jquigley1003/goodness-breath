@@ -28,6 +28,10 @@ ion-segment-button {
 img {
   margin: auto;
   display: block;
+}
+
+.main-image {
+  background-color: var(--ion-color-primary);
   opacity: 1;
   transition: opacity 0.5s linear;
 }

@@ -34,6 +34,12 @@
         <p></p>
       </ion-col>
     </ion-row>
+    <ion-row justify-content-center>
+      <ion-col size="8">
+        <video #video class="video-player" oncontextmenu="return false;"
+               controls controlsList="nodownload"></video>
+      </ion-col>
+    </ion-row>
     <ion-row class="steps-background">
       <ion-col size="12">
         <div text-center padding-top>
@@ -42,13 +48,13 @@
         </div>
         <ion-segment (ionChange)="segmentChanged($event)" value="breatheIn">
           <ion-segment-button href="#breatheIn" value="breatheIn">
-            1. Breathe In
+            1
           </ion-segment-button>
           <ion-segment-button href="#takeMoment" value="takeMoment">
-            2. Take a Moment
+            2
           </ion-segment-button>
           <ion-segment-button href="#breathOut" value="breatheOut">
-            3. Breathe Out
+            3
           </ion-segment-button>
         </ion-segment>
       </ion-col>

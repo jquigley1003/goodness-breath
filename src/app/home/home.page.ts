@@ -1,16 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss']
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  @ViewChild('video') mVideoPlayer: any;
+  video: HTMLVideoElement;
 
   showImage = false;
   showContentBI = true;
   showContentTM = false;
   showContentBO = false;
+
+  constructor(private renderer: Renderer2) {}
+
+  ngOnInit() {
+
+    this.video = this.mVideoPlayer.nativeElement;
+    this.video.src = 'assets/vids/Deva1.mov';
+
+    this.renderer.listen(this.video, 'ended', () => console.log('video ended'));
+  }
 
   vanishOnScroll($event) {
    if ($event && $event.detail && $event.detail.scrollTop) {

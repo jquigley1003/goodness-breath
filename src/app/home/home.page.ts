@@ -1,4 +1,11 @@
 import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AlertController, LoadingController } from '@ionic/angular';
+import { Plugins } from '@capacitor/core';
+
+import { GoogleMapComponent } from '../components/google-map/google-map.component';
+import { DataService } from '../services/data.service';
+
+const { Geolocation } = Plugins;
 
 @Component({
   selector: 'app-home',
@@ -6,6 +13,8 @@ import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
   styleUrls: ['home.page.scss']
 })
 export class HomePage implements OnInit {
+  @ViewChild(GoogleMapComponent) map: GoogleMapComponent;
+
   @ViewChild('video') mVideoPlayer: any;
   video: HTMLVideoElement;
 
@@ -14,7 +23,15 @@ export class HomePage implements OnInit {
   showContentTM = false;
   showContentBO = false;
 
-  constructor(private renderer: Renderer2) {}
+  private latitude: number;
+  private longitude: number;
+
+  constructor(
+    private renderer: Renderer2,
+    private alertCtrl: AlertController,
+    private loadingCtrl: LoadingController,
+    private dataService: DataService
+  ) {}
 
   ngOnInit() {
 
@@ -22,6 +39,12 @@ export class HomePage implements OnInit {
     this.video.src = 'assets/vids/Deva1.mov';
 
     this.renderer.listen(this.video, 'ended', () => console.log('video ended'));
+
+    this.map.init().then((res) => {
+      console.log('map ready!');
+    }, (err) => {
+      console.log(err);
+    });
   }
 
   vanishOnScroll($event) {
@@ -47,4 +70,8 @@ export class HomePage implements OnInit {
       this.showContentBO = true;
     }
   };
+
+  goToFB() {
+    window.open('https://www.facebook.com/GoodnessBreath/');
+  }
 }

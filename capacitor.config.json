@@ -1,0 +1,6 @@
+{
+  "appId": "com.wavingHi.goodnessBreath",
+  "appName": "goodnessBreath",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

@@ -1,5 +1,7 @@
 {
   "name": "goodnessBreath",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

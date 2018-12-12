@@ -3,12 +3,11 @@
     <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content fullscreen (ionScroll)="vanishOnScroll($event)" [scrollEvents]="true">
   <ion-grid no-padding>
     <ion-row>
-      <ion-col [class.vanish]="showImage" class="main-image" no-padding>
-        <img src="/assets/imgs/GBP-smaller.png">
+      <ion-col no-padding>
+        <img [class.vanish]="showImage" class="main-image" src="/assets/imgs/GBP-cropped.jpg">
       </ion-col>
     </ion-row>
     <ion-row justify-content-center>
@@ -37,7 +36,9 @@
     <ion-row justify-content-center>
       <ion-col size="8">
         <video #video class="video-player" oncontextmenu="return false;"
-               controls controlsList="nodownload"></video>
+               controls controlsList="nodownload">
+          <track src="/assets/vids/deva1.vtt" kind="subtitles" srclang="en" label="English">
+        </video>
       </ion-col>
     </ion-row>
     <ion-row class="steps-background">
@@ -148,7 +149,7 @@
     </ion-row>
     <ion-row justify-content-center>
       <ion-col size="8">
-        <h1>Make your commitment by placing your name and location on www.goodnessbreath.com</h1>
+        <h1>Make your commitment by placing your name and location on GoodnessBreath.com</h1>
         <p>
           * Make it real by making it a habit to practice the goodness breath constantly throughout
           the day so that it becomes a part of your daily life focus.
@@ -171,5 +172,28 @@
         </p>
       </ion-col>
     </ion-row>
+    <ion-row justify-content-center>
+    <ion-col size="10">
+      <div class="map-dimensions">
+        <app-google-map></app-google-map>
+      </div>
+    </ion-col>
+  </ion-row>
+    <ion-row justify-content-center>
+      <ion-col class="footer">
+        <h3>Goodness Breath Project</h3>
+        <p></p>
+      </ion-col>
+    </ion-row>
   </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button (click)="goToFB()"><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-youtube"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

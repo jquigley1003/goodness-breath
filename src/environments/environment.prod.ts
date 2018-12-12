@@ -1,3 +1,8 @@
+import { env } from './env';
+
 export const environment = {
-  production: true
+  production: true,
+  googlemap: {
+    apiKey: env.googlemap.apiKey
+  }
 };

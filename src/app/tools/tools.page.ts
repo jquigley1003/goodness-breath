@@ -13,7 +13,7 @@ export class ToolsPage implements OnInit{
 
   @ViewChild(IonSlides)
 
-  slides: Slides;
+  slides: IonSlides;
   hideNext = false;
   hidePrevious = true;
   showImage = false;

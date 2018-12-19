@@ -1,9 +1,11 @@
 import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { AlertController, LoadingController } from '@ionic/angular';
+import { AlertController, LoadingController, ModalController } from '@ionic/angular';
 import { Plugins } from '@capacitor/core';
 
 import { GoogleMapComponent } from '../components/google-map/google-map.component';
 import { DataService } from '../services/data.service';
+
+import { ThreeStepsModalComponent } from '../modals/three-steps-modal/three-steps-modal.component';
 
 const { Geolocation } = Plugins;
 
@@ -22,6 +24,7 @@ export class HomePage implements OnInit {
   showContentBI = true;
   showContentTM = false;
   showContentBO = false;
+  showMoreContent = false;
 
   private latitude: number;
   private longitude: number;
@@ -30,6 +33,7 @@ export class HomePage implements OnInit {
     private renderer: Renderer2,
     private alertCtrl: AlertController,
     private loadingCtrl: LoadingController,
+    private modalCtrl: ModalController,
     private dataService: DataService
   ) {}
 
@@ -113,5 +117,21 @@ export class HomePage implements OnInit {
         overlay.dismiss();
       });
     });
+  }
+
+  onShowMoreContent() {
+    this.showMoreContent = true;
+  }
+
+  onShowLessContent() {
+    this.showMoreContent = false;
+  }
+
+  async presentThreeStepsModal() {
+    const modal = await this.modalCtrl.create({
+      component: ThreeStepsModalComponent,
+      componentProps: {}
+    });
+    return await modal.present();
   }
 }

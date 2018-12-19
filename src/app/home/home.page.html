@@ -19,7 +19,15 @@
           of staying in powerful alignment with who we really are as human beings
           and what we are made of - <span
             style="font-style: italic;">goodness</span>.
+          <ion-button *ngIf="!showMoreContent" color="secondary" fill="clear" size="small"
+                      (click)="onShowMoreContent()">
+            <ion-icon slot="end" name="arrow-dropdown"></ion-icon>
+            Show More
+          </ion-button>
         </p>
+      </ion-col>
+
+      <ion-col *ngIf="showMoreContent" size="8">
         <p>In these challenging times of witnessing our government enact war on our
           environment (wildlife, air and water, earth, national parks), on immigrants
           (e.g., separating parents from children), on our human rights and the very
@@ -30,6 +38,10 @@
           declaration, “When they go low, we go high.”  And since virtually every day
           there is another assault on our democratic values, we must <span
             style="font-style: italic;">consistently</span> practice going “high.”</p>
+        <ion-button color="secondary" fill="clear" size="small" (click)="onShowLessContent()">
+          <ion-icon name="arrow-dropup"></ion-icon>
+          Show Less
+        </ion-button>
         <p></p>
       </ion-col>
     </ion-row>
@@ -93,39 +105,11 @@
       </ion-col>
     </ion-row>
     <ion-row justify-content-center>
-      <ion-col size="8">
-        <h2>Let's explore the depths of each step:</h2>
-        <p>
-          1. Breathe in and fill up with the goodness that dwells at the core of our being. In
-          order to do this, we must remember that goodness lives within us. A lot of people
-          don’t have faith in their own goodness and often feel “not good enough” or “unworthy”
-          in some way. These negative stories about ourselves must be seen for what they are —
-          conditioning and narratives we have made up to explain negative experiences in our
-          lives, usually in our younger years. The call is to relinquish any doubt about the
-          fact of our own inherent goodness.
-        </p>
-        <p>
-          2. Intentionally drink of this goodness and pause long enough to ideally feel the
-          richness of goodness in your body. But whether we feel it or not, the goodness is
-          there. There are various approaches to being aware of the goodness: Breathe into your
-          heart. Acknowledge your essence. Pause and experience your essence as goodness. Some
-          people describe this process as reaching deep inside of themselves, beyond their
-          stories and personalities, into the spiritual well of our oneness. Others tell me
-          that they intentionally tune into a sense of divinity or light within themselves that
-          they believe is in all of us. Still others focus on the giving and receiving of
-          kindness as a way to viscerally fill themselves up with goodness. Of course, feel
-          free to experiment with various ways of tuning into goodness, and discover whatever
-          works best for you. Bottom line, what is most important is that you find your way to
-          access the goodness within you and you pause long enough to savor, in some manner,
-          this essential goodness. Even one conscious moment can be transformative.
-        </p>
-        <p>
-          3. Intentionally channel this goodness out to others, into our country and our world
-          as a force of light. With your exhalation, you propel this goodness from your heart
-          and center, out into the world. You can use sound and body movement if this feels
-          empowering for you. Or you can just use the power of visualization and intention to
-          propel this Goodness out into the world as a force for global healing.
-        </p>
+      <ion-col>
+        <ion-button color="secondary" expand="block" (click)="presentThreeStepsModal()">
+          <ion-icon slot="start" name="open"></ion-icon>
+          Let's explore the depths of each step
+        </ion-button>
       </ion-col>
     </ion-row>
     <ion-row justify-content-center>

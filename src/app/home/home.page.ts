@@ -35,10 +35,10 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
 
-    this.video = this.mVideoPlayer.nativeElement;
+    // this.video = this.mVideoPlayer.nativeElement;
     // this.video.src = 'assets/vids/WebsiteSequence.mp4';
 
-    this.renderer.listen(this.video, 'ended', () => console.log('video ended'));
+    // this.renderer.listen(this.video, 'ended', () => console.log('video ended'));
 
     this.map.init().then((res) => {
       console.log('map ready!');

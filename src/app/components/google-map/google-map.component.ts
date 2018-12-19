@@ -19,6 +19,7 @@ export class GoogleMapComponent {
 
   map: any;
   marker: any;
+  markerImage = 'assets/imgs/spotlight-50.png';
   firstLoadeFailed: boolean = false;
   private mapsLoaded: boolean = false;
   private networkHandler = null;
@@ -173,6 +174,7 @@ export class GoogleMapComponent {
     let latLng = new google.maps.LatLng(lat, lng);
     let marker = new google.maps.Marker({
       map: this.map,
+      icon: this.markerImage,
       animation: google.maps.Animation.DROP,
       position: latLng
     });

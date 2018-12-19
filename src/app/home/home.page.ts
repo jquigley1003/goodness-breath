@@ -36,7 +36,7 @@ export class HomePage implements OnInit {
   ngOnInit() {
 
     this.video = this.mVideoPlayer.nativeElement;
-    this.video.src = 'assets/vids/Deva1.mov';
+    // this.video.src = 'assets/vids/WebsiteSequence.mp4';
 
     this.renderer.listen(this.video, 'ended', () => console.log('video ended'));
 

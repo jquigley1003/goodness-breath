@@ -74,4 +74,44 @@ export class HomePage implements OnInit {
   goToFB() {
     window.open('https://www.facebook.com/GoodnessBreath/');
   }
+
+  setLocation() {
+    console.log('Setting your location...');
+    this.loadingCtrl.create({
+      message: 'Adding your light to the grid...'
+    }).then((overlay) => {
+      overlay.present();
+      Geolocation.getCurrentPosition().then((position) => {
+        overlay.dismiss();
+
+        this.latitude = position.coords.latitude;
+        this.longitude = position.coords.longitude;
+
+        this.map.changeMarker(this.latitude, this.longitude);
+
+        let data = {
+          latitude: this.latitude,
+          longitude: this.longitude
+        };
+
+        //this.dataService.setLocation(data);
+
+        this.alertCtrl.create({
+          header: 'Your light is on the grid.',
+          message: 'Thank you for joining the Goodness Breath Project!',
+          buttons: [
+            {
+              text: 'OK'
+            }
+          ]
+        }).then((alert) => {
+          alert.present();
+        });
+
+      }, (err) => {
+        console.log(err);
+        overlay.dismiss();
+      });
+    });
+  }
 }

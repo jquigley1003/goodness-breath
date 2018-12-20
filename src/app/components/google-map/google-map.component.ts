@@ -117,7 +117,12 @@ export class GoogleMapComponent {
             position.coords.latitude, position.coords.longitude
           );
 
-          let mapOptions = {center: latLng, zoom: 7};
+          let mapOptions = {
+            center: latLng,
+            zoom: 7,
+            streetViewControl: false,
+            mapTypeControl: false
+          };
 
           this.map = new google.maps.Map(
             this.element.nativeElement, mapOptions

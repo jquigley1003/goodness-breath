@@ -63,7 +63,7 @@
       <ion-col size="12">
         <div text-center padding-top>
           <h3>The formula is simple for The Goodness Breath.</h3>
-          <p class="bold-it">Tap on the 3 steps:</p><br><br>
+          <p class="bold-it">Tap on the 3 steps:</p>
         </div>
         <ion-segment (ionChange)="segmentChanged($event)" value="breatheIn">
           <ion-segment-button href="#breatheIn" value="breatheIn">
@@ -160,14 +160,20 @@
         </p>
       </ion-col>
     </ion-row>
-    <ion-row justify-content-center>
-    <ion-col size="10">
-      <div class="map-dimensions">
-        <ion-button color="tertiary" (click)="setLocation()">
-          <ion-icon slot="start" name="pin"></ion-icon>
-          Add your light to the grid!
-        </ion-button>
-        <app-google-map></app-google-map>
+    <ion-row>
+    <!--<ion-col size="10">-->
+      <!--<div class="map-dimensions">-->
+        <!--<ion-button color="tertiary" (click)="setLocation()">-->
+          <!--<ion-icon slot="start" name="pin"></ion-icon>-->
+          <!--Add your light to the grid!-->
+        <!--</ion-button>-->
+        <!--<app-google-map></app-google-map>-->
+      <!--</div>-->
+    <!--</ion-col>-->
+    <ion-col size="12">
+      <div style="height: 50vh; padding: 0;"
+           leaflet
+           [leafletOptions]="options">
       </div>
     </ion-col>
   </ion-row>

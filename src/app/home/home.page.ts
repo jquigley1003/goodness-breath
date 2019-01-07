@@ -2,6 +2,8 @@ import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { AlertController, LoadingController, ModalController } from '@ionic/angular';
 import { Plugins } from '@capacitor/core';
 
+import { latLng, tileLayer } from 'leaflet';
+
 import { GoogleMapComponent } from '../components/google-map/google-map.component';
 import { DataService } from '../services/data.service';
 
@@ -15,6 +17,16 @@ const { Geolocation } = Plugins;
   styleUrls: ['home.page.scss']
 })
 export class HomePage implements OnInit {
+  options = {
+    layers: [
+      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      })
+    ],
+    zoom: 7,
+    center: latLng([46.879966, -121.726909])
+  };
+
   @ViewChild(GoogleMapComponent) map: GoogleMapComponent;
 
   @ViewChild('video') mVideoPlayer: any;
@@ -49,7 +61,14 @@ export class HomePage implements OnInit {
     }, (err) => {
       console.log(err);
     });
+
+    // this.createLeafletMap();
+
   }
+
+  // createLeafletMap() {
+  //   this.
+  // }
 
   vanishOnScroll($event) {
    if ($event && $event.detail && $event.detail.scrollTop) {
@@ -74,6 +93,7 @@ export class HomePage implements OnInit {
       this.showContentBO = true;
     }
   };
+
 
   goToFB() {
     window.open('https://www.facebook.com/GoodnessBreath/');

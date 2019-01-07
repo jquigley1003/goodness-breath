@@ -30,6 +30,11 @@
                 "glob": "**/*.svg",
                 "input": "node_modules/@ionic/angular/dist/ionic/svg",
                 "output": "./svg"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images",
+                "output": "leaflet/"
               }
             ],
             "styles": [
@@ -38,6 +43,9 @@
               },
               {
                 "input": "src/global.scss"
+              },
+              {
+                "input": "node_modules/leaflet/dist/leaflet.css"
               }
             ],
             "scripts": []

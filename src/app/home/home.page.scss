@@ -30,6 +30,10 @@ img {
   display: block;
 }
 
+a {
+  color: var(--ion-color-secondary);
+}
+
 .main-image {
   width: 100%;
   margin: auto;
@@ -74,13 +78,6 @@ img {
 .footer {
   color: var(--ion-color-medium);
   background-color: var(--ion-color-primary-tint);
-}
-
-.breathe1 {
-  overflow: hidden;
-  height: 0;
-  padding-top: 56.25%;
-  background-image: url("../../assets/imgs/breathe-step-1.jpg");
 }
 
 ion-card {

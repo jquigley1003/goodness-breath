@@ -7,6 +7,7 @@ import { ThreeStepsModalComponent } from '../modals/three-steps-modal/three-step
 import { HomePage } from './home.page';
 import { ScrollVanishDirective } from '../shared/scroll-vanish.directive';
 import { GoogleMapComponent } from '../components/google-map/google-map.component';
+import { LeafletMapComponent } from '../components/leaflet-map/leaflet-map.component';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { GoogleMapComponent } from '../components/google-map/google-map.componen
     HomePage,
     ScrollVanishDirective,
     GoogleMapComponent,
+    LeafletMapComponent,
     ThreeStepsModalComponent
   ],
   entryComponents: [

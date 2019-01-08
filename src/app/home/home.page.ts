@@ -18,6 +18,7 @@ const { Geolocation } = Plugins;
 })
 export class HomePage implements OnInit {
   map: Map;
+  mapCreated = false;
   // options = {
   //   layers: [
   //     tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {
@@ -59,7 +60,6 @@ export class HomePage implements OnInit {
     // });
 
     this.createLeafletMap();
-
   }
 
   createLeafletMap() {
@@ -71,21 +71,28 @@ export class HomePage implements OnInit {
       maxZoom: 18
     }).addTo(this.map);
 
+    this.mapCreated = true;
+
     setTimeout(() => {
       this.map.invalidateSize();
-    }, 100);
+    }, 3000);
+
+  }
+
+  handleOnFocus() {
+    this.map.invalidateSize();
+    console.log('Map onLoad activated: the map will be resized')
   }
 
   vanishOnScroll($event) {
    if ($event && $event.detail && $event.detail.scrollTop) {
      const scrollTop = $event.detail.scrollTop;
      this.showImage = scrollTop >= 200;
-
    }
   }
 
   segmentChanged(ev: any) {
-    if(ev.detail.value === 'breatheIn') {
+    if (ev.detail.value === 'breatheIn') {
       this.showContentBI = true;
       this.showContentTM = false;
       this.showContentBO = false;
@@ -98,7 +105,7 @@ export class HomePage implements OnInit {
       this.showContentTM = false;
       this.showContentBO = true;
     }
-  };
+  }
 
 
   goToFB() {

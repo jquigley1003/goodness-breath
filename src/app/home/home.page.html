@@ -7,7 +7,7 @@
   <ion-grid no-padding>
     <ion-row>
       <ion-col no-padding>
-        <img [class.vanish]="showImage" class="main-image" src="/assets/imgs/GBP-cropped.jpg">
+        <img [class.vanish]="showImage" class="main-image" src="/assets/imgs/GBP-cropped2.jpg">
       </ion-col>
     </ion-row>
     <ion-row justify-content-center>
@@ -59,7 +59,7 @@
         <!--</video>-->
       </ion-col>
     </ion-row>
-    <ion-row class="steps-background">
+    <ion-row class="primary-background">
       <ion-col size="12">
         <div text-center padding-top>
           <h3>The formula is simple for The Goodness Breath.</h3>
@@ -133,35 +133,35 @@
           with Goodness?
         </p>
         <p class="bold-it">Let's make it happen.</p>
+        <p>
+          * Add your way of experiencing the goodness breath on our
+          <a href="https://www.facebook.com/GoodnessBreath/" target="_blank">Facebook</a> page.
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="primary-background" justify-content-center>
+      <ion-col size="8">
+        <h1 text-center>Articles About The Goodness Breath Project</h1>
       </ion-col>
     </ion-row>
     <ion-row justify-content-center>
       <ion-col size="8">
-        <h1>Make your commitment by placing your name and location on GoodnessBreath.com</h1>
-        <p>
-          * Make it real by making it a habit to practice the goodness breath constantly throughout
-          the day so that it becomes a part of your daily life focus.
-        </p>
-        <p>
-          * Breathe in Goodness and Breathe out Goodness consciously every day at least for five
-          minutes.
-        </p>
-        <p>
-          * Invite everyone you know to join forces with the Goodness Breath Project. Bring it
-          into your community, your family, your circle of friends, your school, your place of
-          worship. Make it your own to share with as many people as you can and spread the word.
-        </p>
-        <p>
-          * Practice it for yourself, for all of us humans, and for all beings who share Mother
-          Earth as our home.
-        </p>
-        <p>
-          * Add your way of experiencing the goodness breath on
-          <a href="https://www.facebook.com/GoodnessBreath/" target="_blank">Facebook</a>.
-        </p>
+        <ion-card>
+          <ion-img src="/assets/imgs/nasa-53884-unsplash.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle>Thrive Global - February 1, 2019</ion-card-subtitle>
+            <ion-card-title>The Goodness Breath</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            This focus on goodness calls upon us to anchor into the belief that the light within
+            us is more powerful than disillusionment, anger and hate.
+          </ion-card-content>
+          <ion-button color="secondary" slot="end" (click)="goToArticle1()"
+          >View Article</ion-button>
+        </ion-card>
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row justify-content-center>
     <!--<ion-col size="10">-->
       <!--<div class="map-dimensions">-->
         <!--<ion-button color="tertiary" (click)="setLocation()">-->
@@ -171,7 +171,9 @@
         <!--<app-google-map></app-google-map>-->
       <!--</div>-->
     <!--</ion-col>-->
-    <ion-col size="12">
+    <ion-col size="8">
+      <h1>Add Your Name to Light Up the Grid Coming Soon!</h1>
+      <h3>Come back later to add your light.</h3>
       <div id="map"  (focus)="handleOnFocus()" style="width:100%; height:500px;"></div>
     </ion-col>
   </ion-row>

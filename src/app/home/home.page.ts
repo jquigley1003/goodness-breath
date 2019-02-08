@@ -112,6 +112,10 @@ export class HomePage implements OnInit {
     window.open('https://www.facebook.com/GoodnessBreath/');
   }
 
+  goToArticle1() {
+    window.open('https://thriveglobal.com/stories/the-goodness-breath-project/');
+  }
+
   // setLocation() {
   //   console.log('Setting your location...');
   //   this.loadingCtrl.create({

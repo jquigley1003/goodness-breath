@@ -1,10 +1,13 @@
 <ion-header [class.vanish]="showImage">
-  <ion-toolbar>
-    <ion-title>Tools</ion-title>
-  </ion-toolbar>
+  <!--<ion-toolbar>-->
+    <!--<ion-title>Tools</ion-title>-->
+  <!--</ion-toolbar>-->
 </ion-header>
 <ion-content fullscreen (ionScroll)="vanishOnScroll($event)" [scrollEvents]="true">
-  <img [class.vanish]="showImage" class="main-image" src="/assets/imgs/breathe.jpg">
+  <div class="main-image">
+    <img [class.vanish]="showImage" src="/assets/imgs/breathe.jpg">
+    <p class="main-image-title">Useful Tools</p>
+  </div>
   <ion-grid no-padding>
     <ion-row class="tools-background">
       <ion-col size="12" padding-top text-center>

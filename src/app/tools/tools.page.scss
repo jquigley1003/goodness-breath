@@ -28,7 +28,19 @@ ul {
 }
 
 .main-image {
+  position: relative;
   width: 100%;
+}
+
+.main-image-title {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  width: 100%;
+  font-size: 5vw;
+  text-shadow: 3px 3px 5px #000000;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .bold-it {

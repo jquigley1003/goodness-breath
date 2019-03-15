@@ -52,30 +52,28 @@
                 frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
                 modestbranding="1" allowfullscreen>
         </iframe>
-        <!--<video src="assets/vids/WebsiteSequence.mp4" #video class="video-player" oncontextmenu="return false;"-->
-               <!--controls controlsList="nodownload">-->
-        <!--I'm sorry, your browser doesn't support MP4 with H.265-->
-          <!--&lt;!&ndash;<track src="/assets/vids/deva1.vtt" kind="subtitles" srclang="en" label="English">&ndash;&gt;-->
-        <!--</video>-->
       </ion-col>
     </ion-row>
     <ion-row class="primary-background">
       <ion-col size="12">
         <div text-center padding-top>
-          <h3>The formula is simple for The Goodness Breath.</h3>
-          <p class="bold-it">Tap on the 3 steps:</p>
+          <h2>The Formula is Simple for The Goodness Breath.</h2>
+          <p class="bold-it">Tap on each button below:</p>
         </div>
-        <ion-segment (ionChange)="segmentChanged($event)" value="breatheIn">
-          <ion-segment-button href="#breatheIn" value="breatheIn">
-            1
-          </ion-segment-button>
-          <ion-segment-button href="#takeMoment" value="takeMoment">
-            2
-          </ion-segment-button>
-          <ion-segment-button href="#breathOut" value="breatheOut">
-            3
-          </ion-segment-button>
-        </ion-segment>
+        <ion-row>
+          <ion-col align-items-center>
+            <ion-button size="large" shape="round" expand="block" color="secondary"
+                        (click)="showBreatheIn()">One</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button size="large" shape="round"expand="block" color="secondary"
+                        (click)="showTakeMoment()">Two</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button size="large" shape="round"expand="block" color="secondary"
+                        (click)="showBreatheOut()">Three</ion-button>
+          </ion-col>
+        </ion-row>
       </ion-col>
       <ion-col *ngIf="showContentBI" size="12">
         <ion-card>
@@ -106,7 +104,7 @@
       <ion-col>
         <ion-button color="secondary" expand="block" (click)="presentThreeStepsModal()">
           <ion-icon slot="start" name="open"></ion-icon>
-          Let's explore the depths of each step
+          Explore the depths of each step here
         </ion-button>
       </ion-col>
     </ion-row>
@@ -161,22 +159,25 @@
         </ion-card>
       </ion-col>
     </ion-row>
-    <ion-row justify-content-center>
-    <!--<ion-col size="10">-->
-      <!--<div class="map-dimensions">-->
-        <!--<ion-button color="tertiary" (click)="setLocation()">-->
-          <!--<ion-icon slot="start" name="pin"></ion-icon>-->
-          <!--Add your light to the grid!-->
-        <!--</ion-button>-->
-        <!--<app-google-map></app-google-map>-->
-      <!--</div>-->
-    <!--</ion-col>-->
-    <ion-col size="8">
-      <h1>Add Your Name to Light Up the Grid Coming Soon!</h1>
-      <h3>Come back later to add your light.</h3>
-      <div id="map"  (focus)="handleOnFocus()" style="width:100%; height:500px;"></div>
-    </ion-col>
-  </ion-row>
+    <!--<ion-row justify-content-center>-->
+      <!---->
+      <!--<ion-col size="10">-->
+        <!--<div class="map-dimensions">-->
+          <!--<ion-button color="tertiary" (click)="setLocation()">-->
+            <!--<ion-icon slot="start" name="pin"></ion-icon>-->
+            <!--Add your light to the grid!-->
+          <!--</ion-button>-->
+          <!--<app-google-map></app-google-map>-->
+        <!--</div>-->
+      <!--</ion-col>-->
+      <!---->
+      <!--<ion-col size="8">-->
+        <!--<h1>Add Your Name to Light Up the Grid Coming Soon!</h1>-->
+        <!--<h3>Come back later to add your light.</h3>-->
+        <!--<div id="map"  (focus)="handleOnFocus()" style="width:100%; height:500px;"></div>-->
+      <!--</ion-col>-->
+      <!---->
+    <!--</ion-row>-->
     <ion-row justify-content-center>
       <ion-col class="footer">
         <h3>Goodness Breath Project</h3>

@@ -87,7 +87,7 @@ export class HomePage implements OnInit {
   vanishOnScroll($event) {
    if ($event && $event.detail && $event.detail.scrollTop) {
      const scrollTop = $event.detail.scrollTop;
-     this.showImage = scrollTop >= 200;
+     this.showImage = scrollTop >= 300;
    }
   }
 

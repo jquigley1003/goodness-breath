@@ -25,6 +25,11 @@ ion-segment-button {
   --border-radius: 50px;
 }
 
+ion-slides {
+  --bullet-background: var(--ion-color-secondary-shade);
+  --bullet-background-active: var(--ion-color-tertiary);
+}
+
 img {
   margin: auto;
   display: block;

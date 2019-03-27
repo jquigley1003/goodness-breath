@@ -54,7 +54,7 @@
         </iframe>
       </ion-col>
     </ion-row>
-    <ion-row class="primary-background">
+    <ion-row class="primary-border">
       <ion-col size="12">
         <div text-center padding-top>
           <h2>The Formula is Simple for The Goodness Breath.</h2>
@@ -76,7 +76,7 @@
         </ion-row>
       </ion-col>
       <ion-col *ngIf="showContentBI" size="12">
-        <ion-card>
+        <ion-card no-margin no-padding>
           <img src="/assets/imgs/breathe-step-01.jpg"/>
           <div class="card-title">Breathe in and imagine filling ourselves up by drawing
             from the well of our own inherent goodness.
@@ -84,7 +84,7 @@
         </ion-card>
       </ion-col>
       <ion-col *ngIf="showContentTM" size="12">
-        <ion-card>
+        <ion-card no-margin no-padding>
           <img src="/assets/imgs/breathe-step-02.jpg"/>
           <div class="card-title">Take a moment to consciously experience the beneficent
             power of this goodness.
@@ -92,7 +92,7 @@
         </ion-card>
       </ion-col>
       <ion-col *ngIf="showContentBO" size="12">
-        <ion-card>
+        <ion-card no-margin no-padding>
           <img src="/assets/imgs/breathe-step-03.jpg"/>
           <div class="card-title">Breathe out, intentionally channeling this goodness into
             our country and our world as a force of light.
@@ -100,11 +100,19 @@
         </ion-card>
       </ion-col>
     </ion-row>
+    <ion-row justify-content-center>
+      <ion-col>
+        <ion-button color="secondary" expand="block" (click)="presentThreeStepsModal()">
+          <ion-icon slot="start" name="open"></ion-icon>
+          Explore the depths of each step here
+        </ion-button>
+      </ion-col>
+    </ion-row>
     <ion-row justify-content-center padding>
       <ion-col size="12" text-center>
-        <h3>Take Time to Watch Each Video to Find Ways to Make an Impact in Your Community</h3>
+        <h3>Learn Ways to Make an Impact in Your Community by Watching These Videos</h3>
       </ion-col>
-      <ion-slides pager="true">
+      <ion-slides pager="true" [options]="slideOpts">
         <ion-slide text-center>
           <ion-row>
             <ion-col>
@@ -141,15 +149,193 @@
             </ion-col>
           </ion-row>
         </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/qgq0TlQ3nyY"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#4 - Add Your Name</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/se7Ma_5pa1o"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#5 - Enroll Your Community</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/gG25Klv0AhA"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#6 - Don't You Hear the Alarm</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/eOAyPzWP_-Q"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#7 - Join Together</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/DemiMcA0IQQ"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#8 - Kids</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/gfD2RFwXRqA"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#9 - Mission</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/mGFgfD8H8DQ"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#10 - Oneness</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/yiLC2L0BHnU"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#11 - The Practice of Oneness 1</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/cceFFCKi5kE"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#12 - The Practice of Oneness 2</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/AOZsYbAZNfs"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#13 - Ways of Practicing</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/7OkiCBpcKR8"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#14 - Part I Recycling Negative Feelings Before Chopping the Karmic Logs</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/Q6J-yb7NPKE"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#15 - Part II Self Care</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/BUgjKquXGMU"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#16 - Chopping the Karmic Logs</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/MXol71ppdAc"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#17 - Warrior Video</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide>
+          <ion-row>
+            <ion-col>
+              <iframe width="100%" height="400"
+                      src="https://www.youtube.com/embed/sy2ZthOn1-Q"
+                      frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"
+                      modestbranding="1" allowfullscreen>
+              </iframe>
+              <p>#18 - I am a Force of Light</p>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
       </ion-slides>
-    </ion-row>
-    <ion-row justify-content-center>
-      <ion-col>
-        <ion-button color="secondary" expand="block" (click)="presentThreeStepsModal()">
-          <ion-icon slot="start" name="open"></ion-icon>
-          Explore the depths of each step here
-        </ion-button>
-      </ion-col>
+      <ion-row>
+        <ion-col text-center>
+          <ion-button *ngIf="!hidePrevious" (click)="previous()">Previous</ion-button>
+          <ion-button *ngIf="!hideNext" (click)="next()">Next</ion-button>
+        </ion-col>
+      </ion-row>
     </ion-row>
     <ion-row justify-content-center>
       <ion-col size="8">

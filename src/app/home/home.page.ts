@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { AlertController, LoadingController, ModalController } from '@ionic/angular';
+import { AlertController, LoadingController, ModalController, IonSlides } from '@ionic/angular';
 import { Plugins } from '@capacitor/core';
 
 import { Map, latLng, tileLayer, Layer, marker } from 'leaflet';
@@ -31,14 +31,21 @@ export class HomePage implements OnInit {
 
   // @ViewChild(GoogleMapComponent) map: GoogleMapComponent;
 
-  @ViewChild('video') mVideoPlayer: any;
-  video: HTMLVideoElement;
+  @ViewChild(IonSlides) slides: IonSlides;
 
+  // @ViewChild('video') mVideoPlayer: any;
+  // video: HTMLVideoElement;
+  hideNext = false;
+  hidePrevious = true;
   showImage = false;
   showContentBI = true;
   showContentTM = false;
   showContentBO = false;
   showMoreContent = false;
+  slideOpts = {
+    effect: 'flip'
+  };
+
 
   private latitude: number;
   private longitude: number;
@@ -60,6 +67,27 @@ export class HomePage implements OnInit {
     // });
 
     // this.createLeafletMap();
+  }
+
+  next() {
+    this.slides.slideNext();
+    this.checkSlidePosition();
+  }
+
+  previous() {
+    this.slides.slidePrev();
+    this.checkSlidePosition();
+  }
+
+  checkSlidePosition() {
+    this.slides.isEnd()
+      .then((result) => {
+        this.hideNext = result;
+      });
+    this.slides.isBeginning()
+      .then((result) => {
+        this.hidePrevious = result;
+      });
   }
 
   createLeafletMap() {

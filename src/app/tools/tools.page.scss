@@ -70,3 +70,9 @@ ul {
   background: var(--ion-color-primary);
   color: var(--ion-color-secondary);
 }
+
+.tools-border {
+  border: solid 15px var(--ion-color-primary);
+  color: var(--ion-color-secondary);
+  border-radius: 25px;
+}

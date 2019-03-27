@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonSlides} from '@ionic/angular';
+import { IonSlides } from '@ionic/angular';
 
 
 @Component({
@@ -11,9 +11,8 @@ export class ToolsPage implements OnInit{
 
   constructor() { }
 
-  @ViewChild(IonSlides)
+  @ViewChild(IonSlides) slides: IonSlides;
 
-  slides: IonSlides;
   hideNext = false;
   hidePrevious = true;
   showImage = false;

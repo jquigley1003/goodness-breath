@@ -142,6 +142,14 @@ export class HomePage implements OnInit {
     window.open('https://www.facebook.com/GoodnessBreath/');
   }
 
+  goToTwitter() {
+    window.open('https://twitter.com/BreathGoodness');
+  }
+
+  goToYT() {
+    window.open('https://www.youtube.com/channel/UCOtYQ4WEURxKnyNrSPIgCvw');
+  }
+
   goToArticle2() {
     window.open('https://thriveglobal.com/stories/the-invitation-to-practice-awareness-of-our-oneness/');
   }

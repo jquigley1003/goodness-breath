@@ -372,14 +372,29 @@
       </ion-col>
     </ion-row>
     <ion-row justify-content-center>
-      <ion-col size="8">
+      <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
         <ion-card>
-          <ion-img src="/assets/imgs/nasa-53884-unsplash.jpg"></ion-img>
+          <ion-img src="/assets/imgs/UnderWaterView.jpg" alt="marek-okon-1398447-unsplash" (click)="goToArticle2()"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle>Thrive Global - April 10, 2019</ion-card-subtitle>
+            <ion-card-title class="article-title">The Invitation to Practice Awareness of Our Oneness</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="article-content">
+            What changes would occur if we, as a human species, all around our globe,
+            actually woke to the reality that we are truly One eco-system?
+          </ion-card-content>
+          <ion-button color="secondary" slot="end" (click)="goToArticle2()"
+          >View Article</ion-button>
+        </ion-card>
+      </ion-col>
+      <ion-col size-xl="4" size-lg="6" size-md="6" size-sm="12" size-xs="12">
+        <ion-card>
+          <ion-img src="/assets/imgs/nasa-53884-unsplash.jpg" alt="nasa-53884-unsplash" (click)="goToArticle1()"></ion-img>
           <ion-card-header>
             <ion-card-subtitle>Thrive Global - February 1, 2019</ion-card-subtitle>
-            <ion-card-title>The Goodness Breath</ion-card-title>
+            <ion-card-title class="article-title">The Goodness Breath</ion-card-title>
           </ion-card-header>
-          <ion-card-content>
+          <ion-card-content class="article-content">
             This focus on goodness calls upon us to anchor into the belief that the light within
             us is more powerful than disillusionment, anger and hate.
           </ion-card-content>

@@ -150,6 +150,10 @@ export class HomePage implements OnInit {
     window.open('https://www.youtube.com/channel/UCOtYQ4WEURxKnyNrSPIgCvw');
   }
 
+  goToArticle3() {
+    window.open('https://thriveglobal.com/stories/channel-your-goodness-as-a-spiritual-practice/');
+  }
+
   goToArticle2() {
     window.open('https://thriveglobal.com/stories/the-invitation-to-practice-awareness-of-our-oneness/');
   }

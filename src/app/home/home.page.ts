@@ -150,6 +150,10 @@ export class HomePage implements OnInit {
     window.open('https://www.youtube.com/channel/UCOtYQ4WEURxKnyNrSPIgCvw');
   }
 
+  goToArticle4() {
+    window.open('https://thriveglobal.com/stories/love-your-life-as-it-is/?utm_source=Newsletter_Publish&utm_medium=Thrive');
+  }
+
   goToArticle3() {
     window.open('https://thriveglobal.com/stories/channel-your-goodness-as-a-spiritual-practice/');
   }

@@ -11,7 +11,7 @@ export class ToolsPage implements OnInit{
 
   constructor() { }
 
-  @ViewChild(IonSlides) slides: IonSlides;
+  @ViewChild(IonSlides, {static: false}) slides: IonSlides;
 
   hideNext = false;
   hidePrevious = true;

@@ -31,7 +31,7 @@ export class HomePage implements OnInit {
 
   // @ViewChild(GoogleMapComponent) map: GoogleMapComponent;
 
-  @ViewChild(IonSlides) slides: IonSlides;
+  @ViewChild(IonSlides, {static: false}) slides: IonSlides;
 
   // @ViewChild('video') mVideoPlayer: any;
   // video: HTMLVideoElement;
@@ -148,6 +148,14 @@ export class HomePage implements OnInit {
 
   goToYT() {
     window.open('https://www.youtube.com/channel/UCOtYQ4WEURxKnyNrSPIgCvw');
+  }
+
+  goToArticle6() {
+    window.open('https://thriveglobal.com/stories/2020-vision/');
+  }
+
+  goToArticle5() {
+    window.open('https://podcasts.apple.com/us/podcast/being-friends-with-your-illness-with-deva-joy/id1456306837?i=1000460510318');
   }
 
   goToArticle4() {

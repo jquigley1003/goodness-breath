@@ -31,7 +31,7 @@ export class HomePage implements OnInit {
 
   // @ViewChild(GoogleMapComponent) map: GoogleMapComponent;
 
-  @ViewChild(IonSlides, {static: false}) slides: IonSlides;
+  @ViewChild(IonSlides) slides: IonSlides;
 
   // @ViewChild('video') mVideoPlayer: any;
   // video: HTMLVideoElement;
